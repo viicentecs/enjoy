@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Enjoy Movie App</string>
+    <string name="empty_value">""</string>
+    <string name="connect_with">Conéctate con</string>
+    <string name="email_hint">Correo Electrónico</string>
+    <string name="email_hint_example">user@email.com</string>
+
+    <string name="password_hint">Contraseña</string>
+    <string name="password_hint_example">****</string>
+    <string name="log_in_text">Iniciar Sesión</string>
+    <string name="error_empty_fields">Verifique los campos</string>
+    <string name="error_fields">El usuario y/o contrasena no coincide</string>
+
+    <string name="welcome_tittle_text">"¡Bienvenido a Enjoy!</string>
+    <string name="welcome_body_text">Descubre, explora y disfruta las mejores películas y series."</string>
+    <string name="empty_data">No hay datos disponibles en este \n momento.</string>
+    <string name="default_list_page">1/1</string>
+    <string name="description_text">Descripción</string>
+    <string name="classification_text">Clasificación</string>
+    <string name="release_date_text">fecha de lanzamiento</string>
+    <string name="votes_text">Votos</string>
+</resources>

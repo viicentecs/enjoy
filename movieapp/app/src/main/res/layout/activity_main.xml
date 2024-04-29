@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:background="@color/primary">
+
+    <LinearLayout
+        android:id="@+id/ll_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/iv_exit_main"
+            android:layout_width="@dimen/size_60"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_exits"
+            android:paddingVertical="@dimen/size_15"
+            android:contentDescription="@string/empty_value" />
+
+        <ImageView
+            android:id="@+id/iv_logo_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_logo"
+            android:paddingVertical="@dimen/size_15"
+            android:contentDescription="@string/empty_value" />
+
+        <ImageView
+            android:id="@+id/iv_user_main"
+            android:layout_width="@dimen/size_60"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_user"
+            android:paddingVertical="@dimen/size_15"
+            android:contentDescription="@string/empty_value"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pagination"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ll_tittle">
+
+
+        <ImageView
+            android:id="@+id/iv_back_main"
+            android:layout_width="@dimen/size_60"
+            android:layout_height="@dimen/size_60"
+            android:padding="@dimen/size_15"
+            app:srcCompat="@drawable/ic_back"
+            android:contentDescription="@string/empty_value"/>
+
+        <TextView
+            android:id="@+id/tv_number_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginHorizontal="@dimen/size_10"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/default_list_page"
+            android:textAlignment="center"
+            android:textColor="@color/grayText"
+            android:textSize="@dimen/text_24"
+            tools:ignore="SpUsage,TextContrastCheck" />
+
+
+        <ImageView
+            android:id="@+id/iv_next_main"
+            android:layout_width="@dimen/size_60"
+            android:layout_height="@dimen/size_60"
+            android:padding="@dimen/size_15"
+            app:srcCompat="@drawable/ic_next"
+            android:contentDescription="@string/empty_value"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rll_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_pagination"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include layout="@layout/view_empty_list"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_list_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/movie_item"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:itemCount="10"
+            app:spanCount="2"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".activities.MovieDetailsActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/iv_exit_main"
+            android:layout_width="@dimen/size_60"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_back"
+            android:paddingVertical="@dimen/size_15"
+            android:contentDescription="@string/empty_value" />
+
+        <ImageView
+            android:id="@+id/iv_logo_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_logo"
+            android:paddingVertical="@dimen/size_15"
+            android:contentDescription="@string/empty_value" />
+
+       <Space android:layout_width="@dimen/size_60"
+           android:layout_height="match_parent"
+           android:layout_weight="1"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_photo_details"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_300"
+        android:contentDescription="@string/empty_value"
+        tools:srcCompat="@drawable/temp_movie"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_tittle" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_300"
+        android:background="@color/primary"
+        android:alpha="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_tittle" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:background="@drawable/style_background_bottomsheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_photo_details"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/size_10"
+            android:paddingHorizontal="@dimen/size_15">
+
+            <TextView
+                android:id="@+id/tv_tittle_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/tittleDetailsText"
+                android:gravity="center"
+                android:text="@string/empty_value"
+                android:maxLines="2"
+                android:paddingBottom="@dimen/text_24"
+                android:singleLine="false"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/bodyContentText"
+                android:text="@string/release_date_text" />
+
+            <TextView
+                android:id="@+id/tv_date_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/bodyDetailsText"
+                android:text="@string/empty_value" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/bodyContentText"
+                android:text="@string/votes_text" />
+
+
+            <TextView
+                android:id="@+id/tv_qualifity_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/bodyDetailsText"
+                android:text="@string/empty_value" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/bodyContentText"
+                android:text="@string/description_text" />
+
+            <TextView
+                android:id="@+id/tv_description_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/bodyDetailsText"
+                android:text="@string/empty_value" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

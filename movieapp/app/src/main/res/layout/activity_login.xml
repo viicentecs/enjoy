@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.LoginActivity">
+
+    <include layout="@layout/view_background_image"/>
+
+    <ImageView
+        android:id="@+id/iv_logo_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/size_60"
+        android:contentDescription="@string/empty_value"/>
+
+
+    <TextView
+        android:id="@+id/tv_slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo_splash"
+        android:text="@string/app_name"
+        android:textColor="@color/gray"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/size_15"
+        android:background="@drawable/style_background_bottomsheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_slogan"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connect_with"
+            style="@style/tittleContentText"
+            android:textColor="@color/black"
+            android:layout_marginVertical="@dimen/size_20"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/size_30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_slogan"
+            app:layout_constraintBottom_toTopOf="@id/tv_networks">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_hint"
+                style="@style/tittleContentText"
+                android:textColor="@color/blackText"/>
+
+            <EditText
+                android:id="@+id/edt_email_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_60"
+                style="@style/fieldText"
+                android:hint="@string/email_hint_example"
+                android:text="viicente@gmail.com"
+                tools:ignore="Autofill,LabelFor,MissingPrefix,TextFields" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_hint"
+                style="@style/tittleContentText"
+                android:layout_marginTop="@dimen/size_15"
+                android:textColor="@color/blackText"/>
+
+            <EditText
+                android:id="@+id/edt_password_login"
+                style="@style/fieldText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_60"
+                android:hint="@string/password_hint_example"
+                android:inputType="textPassword"
+                android:text="vicente"
+                tools:ignore="Autofill,LabelFor,MissingPrefix,TextFields" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/log_in_text"
+                style="@style/principalButton"
+                android:layout_marginTop="@dimen/size_20"/>
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:id="@+id/tv_networks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connect_with"
+            style="@style/tittleContentText"
+            android:textColor="@color/blackText"/>
+
+        <LinearLayout
+            android:id="@+id/ll_social_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_15">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/size_60"
+                android:layout_height="@dimen/size_60"
+                android:padding="@dimen/size_15"
+                app:srcCompat="@drawable/ic_facebook"
+                android:layout_marginEnd="@dimen/size_5"
+                android:contentDescription="@string/empty_value" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/size_60"
+                android:layout_height="@dimen/size_60"
+                android:padding="@dimen/size_15"
+                app:srcCompat="@drawable/ic_twitter"
+                android:layout_marginStart="@dimen/size_5"
+                android:contentDescription="@string/empty_value" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

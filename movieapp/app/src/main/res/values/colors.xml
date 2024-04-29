@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#C8C8CB</color>
+    <color name="primary">#FF121421</color>
+    <color name="primaryDark">#161721</color>
+    <color name="transparent">#00121421</color>
+
+    <!-- TEXTS COLORS -->
+    <color name="whiteText">#FFFFFF</color>
+    <color name="grayText">#C8C8CB</color>
+    <color name="blackText">#EC000000</color>
+    <color name="textGrayHint">#dddddd</color>
+
+
+</resources>

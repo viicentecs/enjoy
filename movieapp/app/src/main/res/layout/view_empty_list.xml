@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_view_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:background="@color/primary"
+    tools:ignore="UseCompoundDrawables">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_15">
+
+        <ImageView
+            android:layout_width="@dimen/size_280"
+            android:layout_height="@dimen/size_280"
+            android:contentDescription="@string/empty_value"
+            android:layout_centerInParent="true"
+            android:alpha="0.03"
+            android:tint="@color/primaryDark"
+            app:srcCompat="@drawable/style_circle_white"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:layout_width="@dimen/size_250"
+            android:layout_height="@dimen/size_250"
+            android:contentDescription="@string/empty_value"
+            android:layout_centerInParent="true"
+            android:alpha="0.04"
+            android:tint="@color/primaryDark"
+            app:srcCompat="@drawable/style_circle_white"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:layout_width="@dimen/size_200"
+            android:layout_height="@dimen/size_200"
+            android:contentDescription="@string/empty_value"
+            android:layout_centerInParent="true"
+            android:alpha="0.1"
+            android:tint="@color/primaryDark"
+            app:srcCompat="@drawable/style_circle_white"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:id="@+id/img_empty_empty"
+            android:layout_width="@dimen/size_120"
+            android:layout_height="@dimen/size_120"
+            android:contentDescription="@string/empty_value"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_empty"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_10"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/empty_data"
+        android:textAlignment="center"
+        android:textColor="@color/grayText"
+        android:textSize="@dimen/text_24"
+        tools:ignore="SpUsage,TextContrastCheck" />
+
+</LinearLayout>
